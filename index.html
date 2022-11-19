@@ -4,9 +4,107 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
         <title>50 Projects</title>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Roboto", sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+                overflow: auto;
+                margin: 0;
+                font-size: 1.2rem;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            li {
+                line-height: 1.5rem;
+            }
+        </style>
     </head>
     <body>
-        <h1>50 Projects</h1>
+        <div class="container">
+            <h1>50 Projects</h1>
+            <ul id="links"></ul>
+        </div>
+
+        <script>
+            const currentProgress = 17;
+            const paths = [
+                "02 Day 1 - Expanding Cards",
+                "03 Day 2 - Progress Steps",
+                "04 Day 3 - Rotating Navigation",
+                "05 Day 4 - Hidden Search Widget",
+                "06 Day 5 - Blurry Loading",
+                "07 Day 6 - Scroll Animation",
+                "08 Day 7 - Split Landing Page",
+                "09 Day 8 - Form Wave Animation",
+                "10 Day 9 - Sound Board",
+                "11 Day 10 - Dad Jokes",
+                "12 Day 11 - Event KeyCodes",
+                "13 Day 12 - FAQ Collapse",
+                "14 Day 13 - Random Choice Picker",
+                "15 Day 14 - Animated Navigation",
+                "16 Day 15 - Incrementing Counter",
+                "17 Day 16 - Drink Water",
+                "18 Day 17 - Movie App",
+                "19 Day 18 - Background Slider",
+                "20 Day 19 - Theme Clock",
+                "21 Day 20 - Button Ripple Effect",
+                "22 Day 21 - Drag N Drop",
+                "23 Day 22 - Drawing App",
+                "24 Day 23 - Kinetic CSS Loader",
+                "25 Day 24 - Content Placeholder",
+                "26 Day 25 - Sticky Navbar",
+                "27 Day 26 - Double Vertical Slider",
+                "28 Day 27 - Toast Notification",
+                "29 Day 28 - Github Profiles",
+                "30 Day 29 - Double Heart Click",
+                "31 Day 30 - Auto Text Effect",
+                "32 Day 31 - Password Generator",
+                "33 Day 32 - Good, Cheap, Fast Checkboxes",
+                "34 Day 33 - Notes App",
+                "35 Day 34 - Animated Countdown",
+                "36 Day 35 - Image Carousel",
+                "37 Day 36 - Hoverboard",
+                "38 Day 37 - Pokedex",
+                "39 Day 38 - Mobile Tab Navigation",
+                "40 Day 39 - Password Strength Background",
+                "41 Day 40 - 3D Background Boxes",
+                "42 Day 41 - Verify Account UI",
+                "43 Day 42 - Live User Filter",
+                "44 Day 43 - Feedback UI Design",
+                "45 Day 44 - Custom Range Slider",
+                "46 Day 45 - Netflix Navigation",
+                "47 Day 46 - Quiz App",
+                "48 Day 47 - Testimonial Box Switcher",
+                "49 Day 48 - Random Image Feed",
+                "50 Day 49 - Todo List",
+                "51 Day 50 - Insect Catch Game",
+            ];
+            const renderPaths = () => {
+                const linkEl = document.getElementById("links");
+                let links = "";
+                for (let i = 0; i < paths.length; i++)
+                    if (i < currentProgress)
+                        links += `<li><a href="${paths[i]}">${paths[i]} </a></li>`;
+                    else links += `<li>${paths[i]}</li>`;
+
+                linkEl.innerHTML = links;
+            };
+            renderPaths();
+        </script>
     </body>
 </html>
